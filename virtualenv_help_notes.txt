@@ -1,0 +1,17 @@
+Работа с виртуальнным окружением
+
+virtualenv имя -p python3
+запуск окружения
+source /name/bin/activate
+
+сохранение зависимостей 
+pip freeze > requirements.txt
+
+работа с django 
+setting основной фаил
+
+pythin manage.py migrate
+python manage.py createsuperuser (admin, adminqaz)
+
+что бы выйти из окружения просто 
+deactivate
