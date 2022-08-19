@@ -1,0 +1,3 @@
+is_acceptable_password = lambda p: 0 < sum(c.isdigit() for c in p) < len(p) > 6
+
+применить isdigit к каждому элементу

@@ -1,0 +1,9 @@
+def verify_anagrams(a,b):
+    return sorted(a.lower().replace(' ','')) == sorted(b.lower().replace(' ','')
+
+
+from collections import Counter
+import string
+
+letters = lambda s: Counter(c for c in s.upper() if c.isalpha())
+verify_anagrams = lambda s1, s2: letters(s1) == letters(s2)
