@@ -1,0 +1,6 @@
+
+
+выбрать числа из одного списка, которых нет в другом
+
+def array_diff(a, b):
+    return [x for x in a if x not in b]

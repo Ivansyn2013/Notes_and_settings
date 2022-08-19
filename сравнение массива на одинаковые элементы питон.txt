@@ -1,0 +1,4 @@
+def all_the_same(elements):
+   return elements[1:] == elements[:-1]
+
+сравнение массивов на наличие одинаковых элементов

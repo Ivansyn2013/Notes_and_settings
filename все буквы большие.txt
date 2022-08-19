@@ -1,0 +1,8 @@
+
+
+def is_all_upper(text: str) -> bool:
+    res = list(filter(str.isupper, text.split(' ')))
+    return True if len(res) == len( text.split(' ')) else False
+
+def is_all_upper(text: str) -> bool:
+    return text.isupper()
