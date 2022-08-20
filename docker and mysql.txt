@@ -1,0 +1,39 @@
+подсказки по iptables
+
+iptables -t имя таблицы -- имя цепочки -L показать правила
+iptables -t nat -A PREROUTING -j LOG  включить логирование данных пакетов
+
+-dport distination port
+-sport source port
+-p protokol
+
+-A добавлять правила, но они встают в конец
+-I insert rools
+
+
+сохранение правил iptables-persistent
+/etc/iptables/rules.v4
+
+netfilter-persistent reload ( перезагрузка правил) svae flush
+
+
+$ docker exec -it some-mysql bash (запусить баш в контейнере)
+
+
+Mysql
+
+mysql -h 127.0.0.1 -P 3005 database -u user -p pass
+
+Создание контейнера
+
+ sudo docker run --name mysql1 -p порт_хоста:порт_контейнера -e MYSQL_ROOT_PASSWORD=123 -d mysql:8
+
+
+создание юзера для удаленного подключения
+
+CREATE USER 'user1'@'localhost' IDENTIFIED BY '123';
+CREATE USER 'user1'@'%' IDENTIFIED BY '123';
+
+GRANT ALL ON *.* TO 'user1'@'localhost';
+GRANT ALL ON *.* TO 'user1'@'%';
+FLUSH PRIVILEGES;
