@@ -1,0 +1,38 @@
+$ pip install django-tables2
+
+settings.py
+
+INSTALLED_APPS , 'django_tables2'
+TEMPLATES.OPTIONS.context-processors , 'django.template.context_processors.request'
+
+models.py
+
+class hotel(models.Model):
+     name = models.CharField(max_length=20)
+
+views.py
+
+from django.shortcuts import render
+
+def people(request):
+    istekler = hotel.objects.all()
+    return render(request, 'list.html', locals())
+
+list.html
+
+{# yonetim/templates/list.html #}
+{% load render_table from django_tables2 %}
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 
+'ticket/static/css/screen.css' %}" />
+    </head>
+    <body>
+        {% render_table istekler %}
+    </body>
+</html>
+
+Anar Ali 31 июль 2017, в 12:44
+Поделиться

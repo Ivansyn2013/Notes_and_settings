@@ -1,0 +1,22 @@
+Старт проекта
+1. Создаем папку проекта
+2.В ней git clone (создастья еще одна папка)
+3. Создаем вирт  (virtualenv [name] v -p python3
+4. инсталируем зависимости
+5.стартуем django-admin startproject [имя главного файла]  .
+6. открываем Pycharm
+7.Создаем приложения django-admin startapp [name]
+8.Подключаем папки с шаблонами  в settings.py
+9. Там же подключаем приложения INSTALLED_APPS 
+10. Отлючаем сложную аутентефикацию для дебага
+11. проводим миграцию python manage.py migrate
+
+12. Добавить superuser python manage.py createsuperuser
+13. Запуск сервера python manage.py runserver
+
+
+Работа с базами данных 
+аргумент 
+--database=
+Перенос моделей из бд
+python manage.py inspectdb --database=med_product_db > models.py

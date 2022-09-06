@@ -1,0 +1,12 @@
+1. Библиотека pip install python-dotenv 
+https://github.com/theskumar/python-dotenv/blob/main/README.md#getting-started
+2. Создать фаил .env 
+3. загрузить
+import os
+from dotenv import load_dotenv
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+print(dotenv_path)
+if os.path.exists(dotenv_path):
+    print((load_dotenv(dotenv_path)))
+4.получить дикт из .env
+from dotenv import dotenv_values
